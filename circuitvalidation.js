@@ -12,6 +12,12 @@ var xlsx = require('node-xlsx');
 
 app.use(bodyParser.json())
 
+//Tropo Call App Token to trigger Tropo Voice Web-API Script
+//EDIT THIS LINE HERE
+var tropoToken = 'insert_token_here'
+
+
+
 //placedCalls tracks Tropo session ID's with DID's dialed
 var placedCalls = {}
 
@@ -20,9 +26,6 @@ var sparkHook = null
 
 //timer object used to clear timeout
 var timerknock = null
-
-//Tropo Call App Token to trigger Tropo Voice Web-API Script
-var tropoToken = 'insert_token_here'
 
 //Express Engine to accept XLSX file
 app.post('/dataformupload', upload.single('file'), function (req, res, next) {
