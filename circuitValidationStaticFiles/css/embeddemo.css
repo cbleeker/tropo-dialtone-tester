@@ -1,0 +1,219 @@
+body, html {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    height: 100%;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    /*font-size: 1.8em;*/
+    margin: 0;
+    padding: .5rem;
+}
+h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: .5rem;
+}
+p, pre, p.headertitle {
+    line-height: 1.2;
+    margin: 0;
+    padding: .5em;
+}
+ol {
+    line-height: 1.2;
+    list-style-type: none;
+    margin: 0;
+    padding: .5em 1em;
+}
+.animate-if {
+  background:white;
+  border:1px solid black;
+  padding:10px;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+a:active, a:link, a:visited {
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    padding: .1em;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+a:hover {
+    color: #0065c3;
+}
+a img, iframe {
+    border: 0;
+}
+.button:link, .button:visited {
+    /*background-color: #009a00;
+    border-bottom: 3px solid #006400;
+    border-radius: 3px;*/
+    -moz-box-shadow: 2px 2px 4px #000000;
+    -webkit-box-shadow: 2px 2px 4px #000000;
+    box-shadow: 2px 2px 4px #000000;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: .5em .8em;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, .2);
+}
+span.right-align {
+    clear: both;
+    float: right;
+    display: inline-block;
+    padding: .4em;
+}
+a.button-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    border-bottom: 0;
+}
+a.button-link:hover img {
+    opacity: .7;
+}
+.header-image {
+    width: 2.25em;
+    vertical-align: bottom;
+    display: block;
+}
+.button:hover {
+    /*background-color: #00a900 !important;*/
+    opacity: 0.8;
+    filter: alpha(opacity=40);
+}
+.button:active {
+    top: 1px;
+}
+.separator {
+    color: #fff;
+    padding: 0 .5em;
+    text-shadow: 0 1px rgba(0, 0, 0, .2);
+}
+.separator.contrast {
+    color: #000;
+    text-shadow: none;
+}
+.id {
+    color: #ccc;
+    display: inline-block;
+    text-align: right;
+    width: 3em;
+}
+.id:after {
+    content: "."}
+.wrapper {
+    /*background: #FFD700;*/
+    height: 100%}
+.header {
+    margin: 0 10px;
+    height: 100px;
+}
+.header a:hover {
+    color: #fff;
+}
+.contentwrapper {
+    background: #fff;
+    bottom: 0;
+    /*box-shadow: 0 0 .5em rgba(0, 0, 0, .5);*/
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    /*overflow: scroll;*/
+}
+.customercontent {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.chart-container {
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+}
+#tropochart {
+    height: 100% !important;
+    width: 100% !important;
+    position: relative !important;
+}
+.vertical-align {
+    display: flex;
+    justify-contents: center;
+    align-items: center;
+}
+.wing {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+div.loading {
+    height: 100%;
+    width: 100%;
+    position: absolute
+}           
+div.loading p {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 0 0 10px #FFFFFF;
+    float: left;
+    margin: 0;
+    position: absolute; 
+    left: 50%;                   
+    top: 50%; 
+    margin-right: -50%;                         
+    transform: translate(-50%, -50%) }    
+}
+
+@media only screen and (max-width:768px) {
+    .header {
+    margin: 0;
+}
+.contentwrapper {
+    -webkit-overflow-scrolling: touch!important;
+    left: 0;
+    overflow: scroll!important;
+    right: 0;
+}
+.optional {
+    display: none!important;
+}
+
+.headertitle {
+	display: none!important;
+}
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    .header {
+    margin: 0;
+}
+.contentwrapper {
+    -webkit-overflow-scrolling: touch!important;
+    left: 0;
+    overflow: scroll!important;
+    right: 0;
+}
+.optional {
+    display: none!important;
+}
+}

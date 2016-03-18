@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<!-- CDN Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<!-- CDN Optional bootstrap theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    	<!-- CSS for Demo Header Styling -->
+    	<link rel="stylesheet" href="css/embeddemo.css">
+
+        <meta content="width = device-width, initial-scale = 1" name="description">
+        <title>PSTN DID Validator</title>
+    </head>
+    <body ng-app="fileUpload" ng-controller="MyCtrl">
+        <form name="myForm">
+        <fieldset>
+          <legend>Circuit Validation</legend>
+          Enter a SparkHook URL (optional) and upload a file of phone numbers.  Click <a href=/validator/sample.xlsx>here</a> to see a sample file.
+          <br><br>SparkHook URL:
+          <input type="text" name="sparkHookURL" ng-model="sparkHookURL" size="60">
+          <i ng-show="myForm.userName.$error.required">*required</i>
+          <br><br>XLSX File of Phone Numbers:
+          <input type="file" ngf-select ng-model="picFile" name="file"    
+                 accept=".xlsx" ngf-max-size="2MB" required
+                 ngf-model-invalid="errorFiles">
+          <i ng-show="myForm.file.$error.required">*required</i><br>
+          <i ng-show="myForm.file.$error.maxSize">File too large 
+              {{errorFiles[0].size / 1000000|number:1}}MB: max 2M</i>
+          <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+          <br>
+          <button ng-disabled="!myForm.$valid" 
+                  ng-click="uploadPic(picFile)">Submit</button>
+          <span class="progress" ng-show="picFile.progress >= 0">
+            <div style="width:{{picFile.progress}}%" 
+                ng-bind="picFile.progress + '%'"></div>
+          </span>
+          <span ng-show="picFile.result">Upload Successful</span>
+          <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+        </fieldset>
+        <br>
+        </form>
+    </body>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-resource.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-poller/0.3.3/angular-poller.js"></script>
+    <script type="text/javascript" src="/bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+
+   
+    <!-- <script src="/js/analytics.min.js"></script> -->
+	</div>
+	</body>
+</html>

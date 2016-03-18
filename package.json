@@ -1,0 +1,25 @@
+{
+  "name": "tropo-validator",
+  "version": "0.1.0",
+  "description": "Validate PSTN Numbers over PSTN, and post results to Spark room via client inbound WebHook integration",
+  "main": "circuitvalidation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Cisco",
+    "Tropo",
+    "Spark"
+  ],
+  "author": "Casey Bleeker",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.69.0",
+    "body-parser": "^1.14.1",
+    "tropo-webapi": "^1.2.0",
+    "multer": "^1.1.0",
+    "fs-access": "^1.0.0",
+    "node-xlsx": "^0.6.0",
+    "express":"^4.13.3"
+  }
+}
