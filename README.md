@@ -29,3 +29,5 @@ Upload an XLSX file with the phone numbers you want to test (a sample file to sh
 
 #Notes
 You will probably want to adjust the timeout values as you would most likely run this every 24 hours (or for more regularity than node.js can provide for scheduled tasks, remove the timeout loop, place the static test files in the expected location, and then use a chron job to execute at the desired launch time).
+
+Appended readme.md
