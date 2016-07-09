@@ -24,7 +24,7 @@ Edit the circuitvalidator.js file to update the "tropoToken" variable with your 
 
 #RUN!
 node circuitvalidator.js
-Visit the validator webpage at your domain (i.e. http://domain.com:9020/validator or http://localhost:9020/validator)
+Visit the validator webpage at your domain (i.e. http://domain.com:8080/validator or http://localhost:8080/validator)
 Upload an XLSX file with the phone numbers you want to test (a sample file to show the expeted formatting is included in this repo), and pass in the Spark room webhook.  After first launch, the app will check if there is already an XLSX file or Spark Inbound Webhook provided and will start testing immediately if they exist.
 
 #Notes

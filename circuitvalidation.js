@@ -261,7 +261,7 @@ app.use('/validator', express.static(__dirname + "/circuitValidationStaticFiles"
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 
-//Mount App to Port 9020
-app.listen(9020);
-console.log("validationApp server running on port 9020");
+//Mount App to Port 8080
+app.listen(8080);
+console.log("validationApp server running on port 8080");
 

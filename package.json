@@ -11,6 +11,9 @@
     "Tropo",
     "Spark"
   ],
+  "scripts": {
+    "start": "node circuitvalidation.js"
+  },
   "author": "Casey Bleeker",
   "license": "ISC",
   "dependencies": {
