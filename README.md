@@ -10,7 +10,7 @@ Pull this repo, and run "npm install" in the directory.
 #Setup Tropo Web App
 You will need a Tropo Web-API application and have a validated account to perform outbound dialing.  
 
-You can signup for a free Tropo developer account at www.tropo.com.  Create a new Tropo application (Click on "Create New App" under applications).  Name your app, choose "Web (HTTP) API", enter the URL your server will be hosted at (this app defaults to port 9020 i.e. http://domain.com:9020) and then add a phone number to your Tropo app.  
+You can signup for a free Tropo developer account at www.tropo.com.  Create a new Tropo application (Click on "Create New App" under applications).  Name your app, choose "Web (HTTP) API", enter the URL your server will be hosted at (this app defaults to port 8080 i.e. http://domain.com:8080) and then add a phone number to your Tropo app.  
 
 Take note of your Tropo voice API key.
 
